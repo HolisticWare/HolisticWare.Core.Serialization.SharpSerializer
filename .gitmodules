@@ -1,0 +1,6 @@
+[submodule "externals/MonoVersalSharpSerializer"]
+	path = externals/MonoVersalSharpSerializer
+	url = https://github.com/moljac/MonoVersalSharpSerializer.git
+[submodule "externals/SharpSerializer"]
+	path = externals/SharpSerializer
+	url = https://github.com/moljac/SharpSerializer.git
