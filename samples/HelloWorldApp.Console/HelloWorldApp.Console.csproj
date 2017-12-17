@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9A2D1ED4-E8CE-4E39-ADDB-7CC50CFC3E2E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelloWorldApp</RootNamespace>
+    <AssemblyName>HelloWorldApp.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Controller.Person.netfx30.cs">
+      <Link>BusinessObjects.HolisticWare\Controller.Person.netfx30.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Controller.Person.XP.cs">
+      <Link>BusinessObjects.HolisticWare\Controller.Person.XP.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Controller.Person.XP.SharpSerializer.cs">
+      <Link>BusinessObjects.HolisticWare\Controller.Person.XP.SharpSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Person.cs">
+      <Link>BusinessObjects.HolisticWare\Person.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Person.Serializable.cs">
+      <Link>BusinessObjects.HolisticWare\Person.Serializable.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\AdvancedStruct.cs">
+      <Link>BusinessObjects\AdvancedStruct.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\ComplexObject.cs">
+      <Link>BusinessObjects\ComplexObject.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\GenericObject.cs">
+      <Link>BusinessObjects\GenericObject.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\RootContainer.cs">
+      <Link>BusinessObjects\RootContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\Form1.SharpSerializer.cs">
+      <Link>Form1.SharpSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\Form1.SharpSerializer.WF.cs">
+      <Link>Form1.SharpSerializer.WF.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\Form1.WF.cs">
+      <Link>Form1.WF.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\Form1.XP.Shared.cs">
+      <Link>Form1.XP.Shared.cs</Link>
+    </Compile>
+    <Compile Include="Form1.cs" />
+    <Compile Include="Patches\MessageBox.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\HolisticWare.Core.Serialization.SharpSerializer\HolisticWare.Core.Serialization.SharpSerializer.csproj">
+      <Project>{8167F305-4651-4D7F-8FCE-613E1952B88E}</Project>
+      <Name>HolisticWare.Core.Serialization.SharpSerializer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

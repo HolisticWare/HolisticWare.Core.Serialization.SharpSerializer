@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FD8E072-37C6-4E45-9086-3CA4EF614378}</ProjectGuid>
+    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>HelloWorldApp.MonoMac</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>HelloWorldApp.MonoMac</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
+    <SuppressXamMacMigration>true</SuppressXamMacMigration>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <CodeSigningKey></CodeSigningKey>
+    <LinkMode>None</LinkMode>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>false</UseSGen>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
+    <LinkMode>None</LinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <LinkMode>Full</LinkMode>
+    <UseSGen>false</UseSGen>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <ConsolePause>false</ConsolePause>
+    <EnablePackageSigning>true</EnablePackageSigning>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>3rd Party Mac Developer Application</CodeSigningKey>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="MonoMac" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Controller.Person.netfx30.cs">
+      <Link>BusinessObjects.HolisticWare\Controller.Person.netfx30.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Controller.Person.XP.cs">
+      <Link>BusinessObjects.HolisticWare\Controller.Person.XP.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Controller.Person.XP.SharpSerializer.cs">
+      <Link>BusinessObjects.HolisticWare\Controller.Person.XP.SharpSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Person.cs">
+      <Link>BusinessObjects.HolisticWare\Person.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects.HolisticWare\Person.Serializable.cs">
+      <Link>BusinessObjects.HolisticWare\Person.Serializable.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\AdvancedStruct.cs">
+      <Link>BusinessObjects\AdvancedStruct.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\ComplexObject.cs">
+      <Link>BusinessObjects\ComplexObject.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\GenericObject.cs">
+      <Link>BusinessObjects\GenericObject.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\BusinessObjects\RootContainer.cs">
+      <Link>BusinessObjects\RootContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\Form1.SharpSerializer.cs">
+      <Link>Form1.SharpSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\HelloWorldApp\Form1.SharpSerializer.WF.cs">
+      <Link>Form1.SharpSerializer.WF.cs</Link>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1Controller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainMenu.xib" />
+    <InterfaceDefinition Include="Form1.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\HolisticWare.Core.Serialization.SharpSerializer\HolisticWare.Core.Serialization.SharpSerializer.csproj">
+      <Project>{8167F305-4651-4D7F-8FCE-613E1952B88E}</Project>
+      <Name>HolisticWare.Core.Serialization.SharpSerializer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Mono\MonoMac\v0.0\Mono.MonoMac.targets" />
+</Project>
